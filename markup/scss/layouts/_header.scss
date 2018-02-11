@@ -1,0 +1,98 @@
+#header {
+	background: $white;
+
+
+	.logo {
+		display: inline-block;
+		vertical-align: top;
+		width: 159px;
+		float: left;
+	}
+
+	.nav {
+		display: block;
+		@extend %clearfix;
+
+
+		@include media("<=tablet") {
+			// position: absolute;
+			// z-index: 999;
+			// top: 115px;
+			// left: 0;
+			// right: 0;
+			// z-index: -1
+		}
+		.button-holder {
+			float: right;
+		}
+	}
+}
+
+
+.logo {
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	a {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.nav-holder {
+	padding: 10px 0 10px;
+}
+
+.navbar-nav {
+	font-size: 0;
+	line-height: 0;
+	display: inline-block;
+	vertical-align: top;
+	@extend %listreset;
+	@extend %clearfix;
+
+	>li {
+		display: inline-block;
+		vertical-align: top;
+
+		>a {
+			margin: 0 15px;
+		}
+	}
+
+	.hover {
+		>a {
+			color: $light-gray;
+
+		}
+	}
+
+
+	li {
+		font: 13px/15px $base-font-sans-serif;
+
+		a {
+			color: $gray;
+			text-decoration: none;
+			display: block;
+			@include animate(color);
+		}
+	}
+
+	.second-level {
+		display: none;
+	}
+
+	
+}
+
+.select-holder {
+	float: right;
+	.select-wrap {
+		display: inline-block;
+	}
+}

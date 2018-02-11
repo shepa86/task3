@@ -57,5 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# dotenv environment variables file
-markup\node_modules
+# ignore node_modules
+markup/node_modules/
