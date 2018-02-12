@@ -18,20 +18,25 @@
 		<header id="header">
 			<div class="container">
 				<div class="select-holder">
-					<div class="select-wrap">
-						<select name="" id="">
-							<option selected value="1">french</option>
-							<option value="2">Country-1</option>
-							<option value="3">ountry-2</option>
-						</select>
-					</div>
-					<div class="select-wrap">
-						<select name="" id="">
-							<option selected value="1">Choose Country</option>
-							<option value="2">Country-1</option>
-							<option value="3">Country-2</option>
-						</select>
-					</div>
+					<ul>
+						<li class="lang">
+							<span class="lang-icon lang-fr"></span><a href="#">French</a>
+							<ul>
+								<li><span class="lang-icon lang-fr"></span><a href="#">English</a></li>
+								<li><span class="lang-icon lang-fr"></span><a href="#">Spanish</a></li>
+								<li><span class="lang-icon lang-de"></span><a href="#">German</a></li>
+							</ul>
+
+						</li>
+						<li class="country">
+							<a href="#">Choose country</a>
+							<ul>
+								<li><a href="#">Great Britain </a></li>
+								<li><a href="#">Spain</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="nav-holder">
@@ -41,10 +46,8 @@
 					</strong>
 					<a href="#" class="nav-opener"><span></span></a>
 					<nav class="nav">
-						<a href="#" class="btn btn-orange">Help</a>
 						<ul class="navbar-nav">
-							<li class="active">
-							</li>
+							<li class="active"><a href="#" class="">Help</a></li>
 							<li><a href="#">Terms & Conditions</a></li>
 							<li><a href="#">About</a>
 								<ul class="second-level">
@@ -59,7 +62,7 @@
 						</ul>
 						<div class="button-holder">
 							<a href="#" class="btn btn-gray">Register</a>
-							<a href="#" class="btn btn-light-gray">Register</a>
+							<a href="#" class="btn btn-light-gray">Sign up</a>
 						</div>
 					</nav>
 				</div>
@@ -67,52 +70,107 @@
 		</header>
 		<main id="main">
 			<div class="intro-section">
+				<div class="intr-section-wrap">
+					<div class="container">
+						<div class="row">
+							<div class="column-2">
+								<div class="tabset-wrap">
+									<ul class="tabset">
+										<li>
+											<a href="#tab1-0">Book a Car</a>
+										</li>
+										<li>
+											<a href="#tab2-0">Manage Reservation</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1-0">
+											<form action="#" class="book-car">
+												<div class="input-wrap">
+													<a href="#" class="airport-codes">airport codes</a>
+													<label for="location">Location</label>
+													<input type="text" placeholder="Enter airport, city or zip code" id="location" data-required="true">
+													<span class="error">error message</span>
+												</div>
+												<div class="input-wrap">
+													<input id="checkbox" type="checkbox">
+													<label for="checkbox">Return at different location</label>
+												</div>
+												<div class="row">
+													<div class="column-2">
+														<div class="input-wrap pick-date">
+															<label for="up-date">Pick-up date</label>
+															<div class="pick-date">
+																<input type="text" placeholder="20/12/2013" id="up-date" data-required="true">
+																<input type="text" placeholder="10:00" id="" data-required="true">
+															</div>
+															
+															<span class="error">error message</span>
+														</div>
+													</div>
+													<div class="column-2">
+														<div class="input-wrap">
+															<label for="off-date">Drop-off date</label>
+															<div class="pick-date">
+																<input type="text" placeholder="20/12/2013" id="off-date" data-required="true">
+																<input type="text" placeholder="10:00" id="" data-required="true">
+															</div>
+															
+															<span class="error">error message</span>
+														</div>
+													</div>
+													<div class="input-wrap">
+														<label for="car-type">Car type</label>
+														<select name="" id="car-type">
+															<option selected value="1">Standard</option>
+															<option value="2">Country-1</option>
+															<option value="3">Country-2</option>
+														</select>
+													</div>
+													<button class="btn btn-lg">continue</button>
+												</div>
+											</form>
+										</div>
+										<div id="tab2-0">Products tab</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-2">
+								<div class="slick-slider">
+									<div class="slide-item">
+										<div class="slide-content">
+											<span class="slide-title">Great car hire deals.</span>
+											<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor .</p>
+											<a href="#"><span class="icon"></span>learn more</a>
+										</div>
+										<img src="images/slider-2.png" alt="image description">
+									</div>
+									<div class="slide-item">
+										<div class="slide-content">
+											<span class="slide-title">Great car hire deals.-2</span>
+											<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque semper neque.</p>
+											<a href="#"><span class="icon"></span>learn more</a>
+										</div>
+										<img src="images/slider-1.png" alt="image description">
+									</div>
+									<div class="slide-item">
+										<div class="slide-content">
+											<span class="slide-title">Great car hire deals.-3</span>
+											<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque semper neque semper neque.</p>
+											<a href="#"><span class="icon"></span>learn more</a>
+										</div>
+										<img src="images/slider-1.png" alt="image description">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-section">
 				<div class="container">
-					<div class="row">
-						<div class="column-2">
-							<div class="tabset-wrap">
-								<ul class="tabset">
-									<li>
-										<a href="#tab1-0">Book a Car</a>
-									</li>
-									<li>
-										<a href="#tab2-0">Manage Reservation</a>
-									</li>
-								</ul>
-								<div class="tab-content">
-									<div id="tab1-0">Home tab</div>
-									<div id="tab2-0">Products tab</div>
-								</div>
-							</div>
-						</div>
-						<div class="column-2">
-							<div class="slick-slider">
-								<div class="slide-item">
-									<div class="slide-content">
-										<span class="slide-title">Great car hire deals.</span>
-										<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor .</p>
-										<a href="#">learn more</a>
-									</div>
-									<img src="images/slider-2.png" alt="image description">
-								</div>
-								<div class="slide-item">
-									<div class="slide-content">
-										<span class="slide-title">Great car hire deals.-2</span>
-										<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque semper neque.</p>
-										<a href="#">learn more</a>
-									</div>
-									<img src="images/slider-1.png" alt="image description">
-								</div>
-								<div class="slide-item">
-									<div class="slide-content">
-										<span class="slide-title">Great car hire deals.-3</span>
-										<p>Phasellus eget ultricies libero. Sed dolor turpis, malesuada vitae cursus a, auctor semper neque semper neque semper neque.</p>
-										<a href="#">learn more</a>
-									</div>
-									<img src="images/slider-1.png" alt="image description">
-								</div>
-							</div>
-						</div>
+					<div class="content-holder">
+						
 					</div>
 				</div>
 			</div>
