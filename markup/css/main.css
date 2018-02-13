@@ -353,12 +353,53 @@ td,
 th {
   padding: 0; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?9yki70");
+  src: url("../fonts/icomoon.eot?9yki70#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?9yki70") format("truetype"), url("../fonts/icomoon.woff?9yki70") format("woff"), url("../fonts/icomoon.svg?9yki70#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-disc:before {
+  content: "\e903"; }
+
+.icon-doc:before {
+  content: "\e906"; }
+
+.icon-tag:before {
+  content: "\e904"; }
+
+.icon-lifebuoy:before {
+  content: "\e905"; }
+
+.icon-arrow-right:before {
+  content: "\e902"; }
+
+.icon-date:before {
+  content: "\e900"; }
+
+.icon-pin:before {
+  content: "\e901"; }
+
 .slick-dots, .tabset-wrap .tabset, .navbar-nav, .select-holder > ul, .select-holder .lang ul, .select-holder .country ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.clearfix:after, #header .nav:after, .navbar-nav:after {
+.clearfix:after, .signup:after, #header .nav:after, .navbar-nav:after {
   content: '';
   display: block;
   clear: both; }
@@ -380,9 +421,9 @@ html {
   max-height: 1000000px; }
 
 body {
-  color: #333;
+  color: #656d78;
   background: #fff;
-  font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 13px/1.2 "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -590,6 +631,16 @@ input[type='submit'] {
   padding: 0 10px;
   max-width: 960px; }
 
+h2 {
+  font: bold 18px/26px "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #656d78;
+  margin: 0 0 10px 0; }
+
+h3 {
+  font: bold 16px/21px "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #656d78;
+  margin: 5px 0 10px 0; }
+
 .btn {
   font-size: 13px;
   line-height: 15px;
@@ -611,7 +662,7 @@ input[type='submit'] {
   .btn.btn-light0gray {
     background: #c7c9cd; }
   .btn.btn-lg {
-    padding: 17px 17px;
+    padding: 14px 24px;
     font-size: 16px;
     text-transform: uppercase; }
 
@@ -623,7 +674,7 @@ textarea {
   background: #fff;
   border: 1px solid #c7c9cd;
   border-radius: 6px;
-  font: 14px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font: 14px/1.2 "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   -webkit-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out; }
   input:not([type="submit"]):not([type="reset"])::-webkit-input-placeholder,
@@ -659,6 +710,8 @@ input[type="checkbox"] {
       flex-wrap: wrap; }
   .row .column-2 {
     width: 50%; }
+  .row .column-3 {
+    width: 33%; }
 
 .intro-section {
   min-height: 320px; }
@@ -679,11 +732,6 @@ input[type="checkbox"] {
   .slide-content .slide-title {
     font-size: 36px;
     color: #fff; }
-  .slide-content > a {
-    color: #656d78;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative; }
 
 .slick-slider {
   position: relative;
@@ -794,19 +842,93 @@ input[type="checkbox"] {
   top: -9999px !important; }
 
 .main-section {
-  background: #fff;
-  height: 500px;
+  background: url(../images/main-bg.jpg) repeat;
+  padding: 152px 0 20px;
   margin-top: -16px;
   z-index: 900;
   position: relative; }
 
 .content-holder {
-  padding: 40px;
+  font: 300 13px/21px "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  padding: 40px 0;
+  margin: 40px 0;
   border-top: 2px dashed #656d78;
   border-bottom: 2px dashed #656d78; }
+  .content-holder p {
+    margin: 0 0 22px 0; }
+  .content-holder > .row {
+    margin: 0 -10px 0; }
+    .content-holder > .row .column-3 {
+      padding: 10px; }
+  .content-holder h3 {
+    position: relative;
+    padding: 0 0 0 24px; }
+
+.learn-more {
+  font-weight: 700;
+  color: #c7c9cd;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  padding: 0 0 0 24px; }
+  .learn-more:hover {
+    color: #91959d; }
+
+.icon-arrow-right {
+  font-size: 18px;
+  position: absolute;
+  top: -1px;
+  left: 0; }
+
+.icon-pin {
+  font-size: 15px;
+  position: absolute;
+  top: 5px;
+  left: 9px; }
+
+.icon-disc,
+.icon-doc,
+.icon-tag,
+.icon-lifebuoy {
+  font-size: 20px;
+  position: absolute;
+  top: -1px;
+  left: 0px; }
+
+.signup {
+  background: #434b56;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px; }
+  .signup .signup-title {
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px; }
+  .signup > form {
+    width: 58%;
+    float: right;
+    padding: 0px 113px 0 0;
+    position: relative; }
+    .signup > form .row {
+      margin: 0 -5px; }
+      .signup > form .row .column-2 {
+        padding: 0 5px; }
+    .signup > form input {
+      height: 45px;
+      background: #7a8087 !important;
+      border: 1px solid #373e47 !important; }
+    .signup > form button {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      right: -11px; }
 
 #header {
-  background: #fff; }
+  background: #fff;
+  font: 13px/1.2em "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
   #header .logo {
     display: inline-block;
     vertical-align: top;
@@ -840,20 +962,19 @@ input[type="checkbox"] {
   vertical-align: top; }
   .navbar-nav > li {
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: middle; }
     .navbar-nav > li > a {
       margin: 0 15px; }
     .navbar-nav > li.active {
       padding: 6px 10px;
       background: #ec712f;
-      vertical-align: top;
       border-radius: 4px; }
       .navbar-nav > li.active > a {
         color: #fff; }
   .navbar-nav .hover > a {
     color: #c7c9cd; }
   .navbar-nav li {
-    font: 13px/15px "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
+    font: 13px/15px "Ubuntu", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
     .navbar-nav li a {
       color: #656d78;
       text-decoration: none;
@@ -941,7 +1062,8 @@ input[type="checkbox"] {
   .select-holder .country {
     background: #ec712f; }
     .select-holder .country > a {
-      color: #fff; }
+      color: #fff;
+      position: relative; }
     .select-holder .country:after {
       border-top-color: #fff; }
     .select-holder .country ul {

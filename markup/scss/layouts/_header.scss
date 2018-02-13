@@ -1,5 +1,6 @@
 #header {
 	background: $white;
+	font: 13px/1.2em $base-font-sans-serif;
 	.logo {
 		display: inline-block;
 		vertical-align: top;
@@ -58,7 +59,7 @@
 
 	>li {
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
 
 		>a {
 			margin: 0 15px;
@@ -67,7 +68,6 @@
 		&.active {
 			padding: 6px 10px;
 			background: $orange;
-			vertical-align: top;
 			border-radius: 4px;
 
 			>a {
@@ -121,8 +121,7 @@
 				text-decoration: none;
 				display: block;
 				padding: 6px 32px;
-				
-				
+
 			}
 
 			&:after {
@@ -199,6 +198,7 @@
 				display: block;
 				width: 100%;
 				padding: 6px 5px 6px 32px;
+
 			}
 		}
 
@@ -206,6 +206,8 @@
 			>ul {
 				visibility: visible;
 				@include animate(opacity visibility);
+
+
 			}
 		}
 	}
@@ -214,6 +216,7 @@
 		background: $orange;
 		>a {
 			color: $white;
+			position: relative;
 		}
 
 		&:after {
