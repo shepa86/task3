@@ -1,3 +1,192 @@
 #footer {
-	
+	padding: 40px 0 0; 
+}
+
+.footer-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 -10px;
+
+
+}
+
+.footer-nav {
+	width: 41%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+	padding: 0 10px 20px;
+
+	.foote-item {
+		width: 33%;
+		padding: 0 10px;
+		ul{
+			@extend %listreset;
+			letter-spacing: -.4em;
+			line-height: 22px;
+			
+
+			li {
+				letter-spacing: normal;
+				
+
+				
+				
+				a{
+					color: $gray-700;
+					line-height: 16px;
+					text-decoration: none;
+					display: inline-block;
+					
+					@include animate(color);
+					&:hover {
+						color: $light-blue;
+					}
+
+				}
+			}
+		}
+
+		
+	}
+}
+
+.tweets {
+	width: 26%;
+	padding: 0 10px 20px 30px;
+	line-height: 22px;
+
+	.twitter-title {
+		position: relative;
+		padding-left: 18px;
+
+
+
+	}
+	p {
+		margin: 0;
+	}
+
+	.date {
+		color: $light-gray;
+	}
+	a {
+		text-decoration: none;
+		@include animate(color);
+		&:hover {
+			color: darken($light-blue, 10%);
+		}
+	}
+}
+
+.contact-col {
+	width: 33%;
+	padding: 0 10px 20px;
+
+
+
+
+}
+
+.support {
+	width: 100%;
+	background: #f3f3f3;
+	border: 1px solid  $light-gray;
+	border-radius: 4px;
+	position: relative;
+	padding: 20px 10px 16px 100px;
+	margin-bottom: 36px;
+
+	.support-title {
+		font-size: 11px;
+		color: $light-gray;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.telephone {
+		color: #434b56;
+		font-size: 18px;
+		text-decoration: none;
+		display: block;
+		margin-bottom: 6px;
+
+
+	}
+
+	.email {
+		text-decoration: none;
+		display: inline-block;
+		border-bottom: 1px dashed $light-blue;
+	}
+
+	&:before {
+		content:'';
+		position: absolute;
+		z-index: 100;
+		display: block;
+		width: 58px;
+		height: 58px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 20px;
+		background: url(../images/lifebuoy.png);
+	}
+}
+
+.twitter-title,
+.nav-title {
+	display: inline-block;
+	font: 400 16px/22px $base-font-sans-serif;
+	margin-bottom: 10px;
+
+}
+
+
+
+.icon-twitter {
+	font-size: 14px;
+	position: absolute;
+	top: 2px;
+	left: 0px;
+}
+
+.share-this {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@extend %listreset;
+
+	li {
+		
+		
+	}
+
+
+}  
+
+.bottom-row-box {
+
+display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bottom-row {
+	border: 1px solid $light-gray;
+	box-shadow: inset 0px 3px 6px 1px rgba(0,0,0,0.75);
+	background: #f9f9f9;
+	padding: 18px;
+	margin-top: 20px;
+
+	.logo {
+		opacity: 0.8;
+	}
+
+	.adres {
+		color: $light-gray;
+		font-size: 11px;
+	}
 }
