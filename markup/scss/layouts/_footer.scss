@@ -18,9 +18,22 @@
 	margin: 0 -10px;
 	padding: 0 10px 20px;
 
+	@include media("<desktop") {
+		width: 100%
+	}
+
 	.foote-item {
 		width: 33%;
 		padding: 0 10px;
+
+		@include media("<desktop") {
+			text-align: center;
+			padding: 0 10px 10px;
+		}
+
+		@include media("<=400px") {
+			width: 100%;
+		}
 		ul{
 			@extend %listreset;
 			letter-spacing: -.4em;
@@ -29,6 +42,10 @@
 
 			li {
 				letter-spacing: normal;
+				@include media("<=400px") {
+					display: inline-block;
+					padding: 0 10px 0;
+				}
 				
 
 				
@@ -46,6 +63,7 @@
 
 				}
 			}
+
 		}
 
 		
@@ -56,6 +74,12 @@
 	width: 26%;
 	padding: 0 10px 20px 30px;
 	line-height: 22px;
+	@include media("<desktop") {
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto
+
+	}
 
 	.twitter-title {
 		position: relative;
@@ -83,6 +107,11 @@
 .contact-col {
 	width: 33%;
 	padding: 0 10px 20px;
+	@include media("<desktop") {
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto;
+	}
 
 
 
@@ -97,6 +126,7 @@
 	position: relative;
 	padding: 20px 10px 16px 100px;
 	margin-bottom: 36px;
+	box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .15);
 
 	.support-title {
 		font-size: 11px;
@@ -140,6 +170,9 @@
 	display: inline-block;
 	font: 400 16px/22px $base-font-sans-serif;
 	margin-bottom: 10px;
+	@include media("<tablet") {
+		    margin-bottom: 0;
+	}
 
 }
 
@@ -168,25 +201,26 @@
 
 .bottom-row-box {
 
-display: flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .bottom-row {
-	border: 1px solid $light-gray;
-	box-shadow: inset 0px 3px 6px 1px rgba(0,0,0,0.75);
+	border-top: 1px solid $light-gray;
+	box-shadow: inset 0  2px 5px 0px rgba(0, 0, 0, .15);
 	background: #f9f9f9;
-	padding: 18px;
-	margin-top: 20px;
+	padding: 18px 0 8px;
+    margin-top: 20px;
 
 	.logo {
 		opacity: 0.8;
+		margin-bottom: 10px;
 	}
 
 	.adres {
 		color: $light-gray;
-		font-size: 11px;
+		font-size: 13px;
 	}
 }

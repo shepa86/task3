@@ -8,7 +8,6 @@
 	margin: 0 auto;
 	padding: 0 10px;
 	max-width: 960px;
-	
 }
 
 h2 {
@@ -21,7 +20,6 @@ h3 {
 	font: bold 16px/21px $base-font-sans-serif;
 	color: $gray;
 	margin: 5px 0 10px 0;
-
 }
 
 .btn {
@@ -36,7 +34,8 @@ h3 {
 	vertical-align: top;
 	border-radius: 4px;
 	border: none;
-	@include animate(color background );
+	outline: 0;
+	@include animate(color background);
 
 	&:hover {
 		background: darken($orange, 10%);
@@ -51,7 +50,8 @@ h3 {
 	}
 
 	&.btn-lg {
-		padding: 14px 24px;;
+		padding: 14px 24px;
+		;
 		font-size: 16px;
 		text-transform: uppercase;
 	}
@@ -60,12 +60,14 @@ h3 {
 input:not([type="submit"]):not([type="reset"]),
 textarea {
 	margin: 0;
-	padding: 10px 8px;
+	padding: 14px 8px;
 	width: 100%;
 	background: $white;
 	border: 1px solid $light-gray;
 	border-radius: 6px;
 	font: 14px/1.2 $base-font-family;
+	color: $gray;
+	box-shadow: inset 0 0 15px 1px rgba(0, 0, 0, .10);
 	@include animate(border-color);
 
 	@include placeholder {
@@ -76,11 +78,9 @@ textarea {
 		border: 1px solid darken($light-gray, 20%);
 		outline: 0;
 	}
-
-
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
 	width: 20px !important;
 	height: 20px;
 }
@@ -90,16 +90,16 @@ input[type="checkbox"]{
 	border-radius: 3px;
 	height: 20px;
 	width: 20px;
+	box-shadow: inset 0 0 15px 1px rgba(0, 0, 0, .10);
 	span {
 		height: 6px;
 		width: 10px;
 	}
-	&.jcf-focus{
+	&.jcf-focus {
 		border-color: darken($light-gray, 20%) !important;
-		*{
+		* {
 			border-color: darken($light-gray, 20%) !important;
 		}
-
 	}
 }
 
@@ -118,9 +118,9 @@ input[type="checkbox"]{
 
 .intro-section {
 
-	min-height: 320px;
+	min-height: 340px;
 
-	.row{
+	.row {
 		margin: 0 -10px 0 -10px;
 		position: relative;
 		z-index: 910;
@@ -141,7 +141,7 @@ input[type="checkbox"]{
 	background: #b1b3b5;
 	width: 100%;
 	float: left;
-	padding: 56px 0 0;
+	padding: 54px 0 0;
 	@include media("<tablet") {
 		float: none
 	}
@@ -150,46 +150,50 @@ input[type="checkbox"]{
 
 .slide-content {
 	color: $white;
+	font-size: 16px;
+	line-height: 24px;
 	padding: 0 0 0 20px;
+	margin-bottom: 34px;
+
 
 
 	.slide-title {
 		font-size: 36px;
+		line-height: 48px;
 		color: $white;
-
 	}
 
+	p {
+		margin: 0 0 10px;
+	}
 }
 
 
 .slick-slider {
 	position: relative;
 	z-index: 999;
-
-}
-
-.slick-slide  {
 	img {
 		margin: 0 auto;
 	}
 }
+
+
 
 .slick-dots {
 	@extend %listreset;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 15px 0 0;
 
-
-	li{
+	li {
 		margin: 0 3px;
 	}
 
 	.slick-active {
-		button{
+		button {
 
 			background: #3a90ef;
-
 		}
 	}
 
@@ -204,7 +208,7 @@ input[type="checkbox"]{
 		text-indent: -9999px;
 		color: transparent;
 		border-radius: 50%;
-		outline:0;
+		outline: 0;
 	}
 }
 
@@ -215,10 +219,11 @@ input[type="checkbox"]{
 	width: 100%;
 	background: $white;
 	border-radius: 4px;
-	border: 1px solid $gray;
+	border: 1px solid $light-gray;
 	position: relative;
 	z-index: 999;
-	.tabset  {
+	box-shadow: 0 3px 11px 0px rgba(0, 0, 0, .15);
+	.tabset {
 		@extend %listreset;
 		letter-spacing: -.4em;
 		font-size: 16px;
@@ -238,9 +243,7 @@ input[type="checkbox"]{
 				display: block;
 				height: 100%;
 				text-align: center;
-				padding: 16px 0;
-
-
+				padding: 12px 0;
 			}
 		}
 
@@ -248,7 +251,7 @@ input[type="checkbox"]{
 			background: $white;
 			position: relative;
 			border: none;
-			a{
+			a {
 				color: $gray;
 			}
 
@@ -260,36 +263,33 @@ input[type="checkbox"]{
 				background: $orange;
 				position: absolute;
 				top: -1px;
-
-
 			}
 		}
+		@include media("<desktop") {
+			font-size: 12px;
+		}
 	}
-
-
-
-
 }
 
 .tab-content {
-	padding: 20px 38px 30px;
-	max-height: 366px;
+	margin: 16px 38px;
+
 	overflow: hidden;
 	line-height: 18px;
 	.input-wrap {
 		position: relative;
+		margin: 0 0 22px;
 		.airport-codes {
 			float: right;
 			text-decoration: none;
 			font-size: 12px;
 			border-bottom: 1px dashed $light-blue;
 			text-transform: uppercase;
-
 		}
 		label {
 			font-size: 12px;
 			text-transform: uppercase;
-			margin: 0 0 10px;
+			margin: 0 0 7px;
 			display: block;
 		}
 
@@ -304,11 +304,13 @@ input[type="checkbox"]{
 		.jcf-checkbox+label {
 			display: inline-block;
 			text-transform: none;
+			font-size: 14px;
+			line-height: 16px;
 		}
 
 		input:not([type="submit"]):not([type="reset"]),
-		textarea  {
-			margin-bottom: 10px;
+		textarea {
+			margin-bottom: 8px;
 		}
 	}
 	.pick-date {
@@ -328,35 +330,40 @@ input[type="checkbox"]{
 			padding: 0 4px;
 			width: 66.6%;
 			@include media("<desktop") {
-				width: 100% 
+				width: 100%
 			}
 		}
 	}
 
 	.form-row {
-		margin: 0 -4px;
+		margin: 0 -4px 22px;
 		display: flex;
 		flex-wrap: wrap;
 
 		.form-column-2 {
 			width: 50%;
 			padding: 0 8px;
+			@include media("<=400px") {
+				width: 100%;
+			}
 		}
 	}
 
 	.input-select {
 		width: 32.3%;
 		overflow: hidden;
+		margin-bottom: 0;
 
 		.jcf-select {
 			min-width: 122px;
-			height: 38px;
+			height: 42px;
 			border: 1px solid $light-gray;
 			border-radius: 6px;
+			box-shadow: inset 0 0 15px 1px rgba(0, 0, 0, .10);
 
-			
-			.jcf-select-text{
-				padding: 10px 8px;
+
+			.jcf-select-text {
+				padding: 12px 8px;
 				font: 14px/1.2 $base-font-family;
 				margin: 0px 11px 0 8px;
 			}
@@ -369,39 +376,52 @@ input[type="checkbox"]{
 					content: '';
 					position: absolute;
 					z-index: 500;
-					top: 12px;
+					top: 16px;
 					right: 10px;
-					border: 5px solid transparent;	
+					border: 5px solid transparent;
 					border-top: 5px solid $light-gray;
 				}
 			}
 
-			&.jcf-focus{
+			&.jcf-focus {
 				border-color: darken($light-gray, 20%) !important;
-				*{
+				* {
 					border-color: darken($light-gray, 20%) !important;
 				}
-
 			}
 
 			.jcf-select-drop-content {
 				border-color: darken($light-gray, 20%) !important;
 			}
-
-
 		}
 	}
+
+	form {
+		button {
+			float: right;
+			margin: 25px 0 0;
+		}
+	}
+	@include media(">=tablet") {
+		max-height: 400px;
+
+	}
+	@include media("<desktop") {
+		margin: 16px;
+	}
 }
-.jcf-select-drop{
+
+.jcf-select-drop {
 	.jcf-select-drop-content {
-   border-color: darken($light-gray, 20%) !important;
+		border-color: darken($light-gray, 20%) !important;
+	}
 }
-} 
+
 #off-date,
 #up-date {
 	padding-left: 30px;
-
 }
+
 .js-tab-hidden {
 	display: block !important;
 	left: -9999px !important;
@@ -413,10 +433,14 @@ input[type="checkbox"]{
 
 .main-section {
 	background: url(../images/main-bg.jpg) repeat;
-	padding: 152px 0 20px;
+	padding: 114px 0 20px;
 	margin-top: -16px;
 	z-index: 900;
 	position: relative;
+	box-shadow: inset 0 -2px 5px 0px rgba(0, 0, 0, .15);
+	@include media("<desktop") {
+		padding: 166px 0 20px;
+	}
 	@include media("<tablet") {
 		padding: 30px 0;
 	}
@@ -424,10 +448,10 @@ input[type="checkbox"]{
 
 .content-holder {
 	font: 300 13px/21px $base-font-sans-serif;
-	padding: 40px 0;
-	margin: 40px 0;
-	border-top: 2px dashed $gray;
-	border-bottom: 2px dashed $gray;
+	padding: 28px 0 0;
+	margin: 36px 0;
+	border-top: 1px dashed $light-gray;
+	border-bottom: 1px dashed $light-gray;
 
 	p {
 		margin: 0 0 22px 0;
@@ -436,7 +460,12 @@ input[type="checkbox"]{
 	>.row {
 		margin: 0 -10px 0;
 		.column-3 {
-			padding: 10px
+			padding: 10px;
+			@include media("<tablet") {
+				width: 100%;
+				max-width: 400px;
+				margin: 0 auto;
+			}
 		}
 	}
 
@@ -451,6 +480,8 @@ input[type="checkbox"]{
 
 .learn-more {
 	font-weight: 700;
+	font-size: 13px;
+	line-height: 15px;
 	color: $light-gray;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -462,7 +493,6 @@ input[type="checkbox"]{
 	&:hover {
 		color: darken($light-gray, 20%);
 	}
-
 }
 
 .icon-arrow-right {
@@ -491,12 +521,12 @@ input[type="checkbox"]{
 	position: relative;
 	font-size: 14px;
 	color: $light-blue;
+	width: 100%;
 	&:before {
 		position: absolute;
-		top: 12px;
-		left: 8px;
+		top: 16px;
+		left: 12px;
 	}
-
 }
 
 .signup {
@@ -520,18 +550,31 @@ input[type="checkbox"]{
 		position: relative;
 		@include media("<desktop") {
 			float: none;
+			width: 100%;
+		}
+
+		@include media("<=400px") {
+			
+			padding: 0;
+
 		}
 
 		.row {
 			margin: 0 -5px;
 			.column-2 {
 				padding: 0 5px;
+
+				@include media("<=400px") {
+					width: 100%;
+					padding: 0 5px 10px;
+				}
 			}
 		}
 		input {
 			height: 45px;
 			background: #7a8087 !important;
 			border: 1px solid #373e47 !important;
+			color: #fff !important;
 		}
 
 
@@ -540,6 +583,15 @@ input[type="checkbox"]{
 			z-index: 100;
 			top: 0;
 			right: -11px;
+
+			@include media("<=400px") {
+				position: relative;
+				margin: 0 5px;
+				width: 100%;
+				left: 0;
+			}
 		}
+
+		
 	}
 }

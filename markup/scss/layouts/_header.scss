@@ -1,6 +1,7 @@
 #header {
 	background: $white;
 	font: 13px/1.2em $base-font-sans-serif;
+
 	
 
 	.logo {
@@ -62,7 +63,7 @@
 .navbar-nav {
 	font-size: 0;
 	line-height: 0;
-	margin: 2px 0 0 59px;
+	margin: -3px 0 0 59px;
 	display: inline-block;
 	vertical-align: top;
 	@extend %listreset;
@@ -73,11 +74,11 @@
 		vertical-align: middle;
 
 		>a {
-			margin: 0 15px;
+			margin: 0 10px;
 		}
 
 		&.active {
-			padding: 6px 10px;
+			padding: 6px 0;
 			background: $orange;
 			border-radius: 4px;
 
@@ -190,7 +191,7 @@
 
 		.lang-icon {
 			position: absolute;
-			z-index: 500;
+			z-index: 999;
 			top: 8px;
 			left: 10px;
 			@include media("<tablet") {
@@ -216,7 +217,7 @@
 		ul {
 			@extend %listreset;
 			position: absolute;
-			z-index: 500;
+			z-index: 999;
 			top: 25px;
 			left: -1px;
 			right: -1px;
@@ -364,7 +365,7 @@
 .nav-active {
 	#header {
 		.nav {
-			z-index: 999;
+			z-index: 995;
 		}
 	}
 	
