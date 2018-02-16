@@ -21,6 +21,9 @@ $media-expressions: (
 
 @import 'vendors/include-media';
 @import 'vendors/normalize';
+@import 'vendors/jquery-ui';
+@import 'vendors/jcf';
+@import 'vendors/slick';
 @import 'base/icomoon';
 @import 'base/functions';
 @import 'base/variables';
@@ -29,9 +32,6 @@ $media-expressions: (
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/forms';
-@import 'Layouts/jcf';
-@import 'Layouts/slick';
-@import 'layouts/jcf';
 @import 'layouts/comon';
 @import 'layouts/header';
 @import 'layouts/footer'

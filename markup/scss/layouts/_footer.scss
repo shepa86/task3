@@ -7,8 +7,6 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 -10px;
-
-
 }
 
 .footer-nav {
@@ -34,39 +32,33 @@
 		@include media("<=400px") {
 			width: 100%;
 		}
-		ul{
+
+		ul {
 			@extend %listreset;
 			letter-spacing: -.4em;
 			line-height: 22px;
-			
 
 			li {
 				letter-spacing: normal;
+
 				@include media("<=400px") {
 					display: inline-block;
 					padding: 0 10px 0;
 				}
-				
 
-				
-				
 				a{
+					@include animate(color);
 					color: $gray-700;
 					line-height: 16px;
 					text-decoration: none;
 					display: inline-block;
-					
-					@include animate(color);
+
 					&:hover {
 						color: $light-blue;
 					}
-
 				}
 			}
-
 		}
-
-		
 	}
 }
 
@@ -74,20 +66,18 @@
 	width: 26%;
 	padding: 0 10px 20px 30px;
 	line-height: 22px;
+
 	@include media("<desktop") {
 		width: 100%;
 		max-width: 320px;
 		margin: 0 auto
-
 	}
 
 	.twitter-title {
 		position: relative;
 		padding-left: 18px;
-
-
-
 	}
+
 	p {
 		margin: 0;
 	}
@@ -95,9 +85,11 @@
 	.date {
 		color: $light-gray;
 	}
+
 	a {
-		text-decoration: none;
 		@include animate(color);
+		text-decoration: none;
+
 		&:hover {
 			color: darken($light-blue, 10%);
 		}
@@ -107,15 +99,12 @@
 .contact-col {
 	width: 33%;
 	padding: 0 10px 20px;
+
 	@include media("<desktop") {
 		width: 100%;
 		max-width: 320px;
 		margin: 0 auto;
 	}
-
-
-
-
 }
 
 .support {
@@ -127,29 +116,6 @@
 	padding: 20px 10px 16px 100px;
 	margin-bottom: 36px;
 	box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .15);
-
-	.support-title {
-		font-size: 11px;
-		color: $light-gray;
-		text-transform: uppercase;
-		display: block;
-	}
-
-	.telephone {
-		color: #434b56;
-		font-size: 18px;
-		text-decoration: none;
-		display: block;
-		margin-bottom: 6px;
-
-
-	}
-
-	.email {
-		text-decoration: none;
-		display: inline-block;
-		border-bottom: 1px dashed $light-blue;
-	}
 
 	&:before {
 		content:'';
@@ -163,6 +129,32 @@
 		left: 20px;
 		background: url(../images/lifebuoy.png);
 	}
+
+	.support-title {
+		font-size: 11px;
+		line-height: 13px;
+		color: $light-gray;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.telephone {
+		color: #434b56;
+		font-size: 18px;
+		line-height: 20px;
+		text-decoration: none;
+		display: block;
+		margin-bottom: 6px;
+
+
+	}
+
+	.email {
+		text-decoration: none;
+		display: inline-block;
+		border-bottom: 1px dashed $light-blue;
+	}
+
 }
 
 .twitter-title,
@@ -170,37 +162,28 @@
 	display: inline-block;
 	font: 400 16px/22px $base-font-sans-serif;
 	margin-bottom: 10px;
+	
 	@include media("<tablet") {
-		    margin-bottom: 0;
+		margin-bottom: 0;
 	}
-
 }
-
-
 
 .icon-twitter {
 	font-size: 14px;
+	line-height: 16px;
 	position: absolute;
 	top: 2px;
 	left: 0px;
 }
 
 .share-this {
+	@extend %listreset;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	@extend %listreset;
-
-	li {
-		
-		
-	}
-
-
-}  
+}
 
 .bottom-row-box {
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -212,7 +195,7 @@
 	box-shadow: inset 0  2px 5px 0px rgba(0, 0, 0, .15);
 	background: #f9f9f9;
 	padding: 18px 0 8px;
-    margin-top: 20px;
+	margin-top: 20px;
 
 	.logo {
 		opacity: 0.8;
@@ -222,5 +205,6 @@
 	.adres {
 		color: $light-gray;
 		font-size: 13px;
+		line-height: 15px;
 	}
 }
