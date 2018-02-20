@@ -72,6 +72,7 @@ textarea {
 	font: 14px/1.2 $base-font-family;
 	color: $gray;
 	box-shadow: inset 0 0 15px 1px rgba(0, 0, 0, .10);
+	height: 46px;
 
 	@include placeholder {
 		color: $light-gray;
@@ -258,9 +259,12 @@ input[type="checkbox"] {
 				color: $light-gray;
 				text-decoration: none;
 				display: block;
-				height: 100%;
 				text-align: center;
 				padding: 12px 0;
+
+				&:hover {
+					opacity: .8;
+				}
 			}
 		}
 
@@ -286,12 +290,12 @@ input[type="checkbox"] {
 }
 
 .tab-content {
-	margin: 16px 38px;
+	padding: 16px 38px;
 	overflow: hidden;
 	line-height: 18px;
 
 	@include media("<desktop") {
-		margin: 16px;
+		padding: 16px;
 	}
 
 	.input-wrap {
@@ -525,6 +529,7 @@ input[type="checkbox"] {
 
 .learn-more {
 	@include animate(color);
+	display: inline-block;
 	font-weight: 700;
 	font-size: 13px;
 	line-height: 15px;
@@ -543,7 +548,7 @@ input[type="checkbox"] {
 	font-size: 18px;
 	line-height: 20px;
 	position: absolute;
-	top: -1px;
+	top: -2px;
 	left: 0;
 }
 

@@ -7,16 +7,34 @@
 	}
 
 	.logo {
-		display: inline-block;
+
 		vertical-align: top;
 		width: 159px;
 		float: left;
 	}
 
+	
+}
+
+.logo {
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	a {
+		display: block;
+	}
+}
+
+.nav-holder {
+	@extend %clearfix;
+	padding: 30px 0 14px;
+
 	.nav {
 		@extend %clearfix;
 
-		display: block;
 		background: $white;
 
 		@include media("<=tablet") {
@@ -45,24 +63,6 @@
 
 		}
 	}
-}
-
-.logo {
-	img {
-		max-width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	a {
-		display: inline-block;
-		vertical-align: top;
-	}
-}
-
-.nav-holder {
-	@extend %clearfix;
-	padding: 30px 0 14px;
 }
 
 .navbar-nav {
@@ -94,12 +94,13 @@
 
 		&.active {
 			@include animate(color background);
-			padding: 6px 0;
 			background: $orange;
 			border-radius: 4px;
 
 			>a {
 				color: $white;
+				padding: 6px 10px;
+				margin: 0;
 			}
 
 			@include media("<=tablet") {
@@ -111,6 +112,7 @@
 
 		>a {
 			margin: 0 10px;
+			text-transform: capitalize;
 		}
 	}
 
@@ -153,44 +155,41 @@
 		margin-right: 60px;
 	}
 
-	>ul {
-		@extend %listreset;
-		letter-spacing: -.4em;
+	.lang,
+	.country {
+		display: inline-block;
+		vertical-align: top;
+		
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		margin: -2px 0 0 10px;
+		position: relative;
 
-		>li{
-			letter-spacing: normal;
-			display: inline-block;
-			vertical-align: top;
-			border: 1px solid $light-gray;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			margin: -2px 0 0 10px;
-			position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 500;
+			top: 12px;
+			right: 10px;
+			border: 5px solid transparent;	
+			border-top: 5px solid $light-gray;
+		}
 
-			&:after {
-				content: '';
-				position: absolute;
-				z-index: 500;
-				top: 12px;
-				right: 10px;
-				border: 5px solid transparent;	
-				border-top: 5px solid $light-gray;
-			}
+		@include media("<=tablet") {
+			font-size: 0;
+		}
 
-			@include media("<=tablet") {
-				font-size: 0;
-			}
-
-			>a {
-				text-decoration: none;
-				display: block;
-				padding: 6px 32px;
-			}
+		>a {
+			text-decoration: none;
+			display: block;
+			padding: 6px 32px;
 		}
 	}
 
+
 	.lang {
 		background: $white;
+		border: 1px solid $light-gray;
 
 		&:hover {
 			>ul {
@@ -278,6 +277,7 @@
 
 	.country {
 		background: $orange;
+		border: 1px solid #cc692f;
 
 		&:hover {
 			>ul {
@@ -362,7 +362,7 @@
 .nav-opener {
 	width: 32px;
 	height: 24px;
-	display: block;
+	
 	position: absolute;
 	z-index: 900;
 	right: 20px;

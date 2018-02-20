@@ -39,13 +39,6 @@ function initTouchNav() {
 	});
 }
 
-// // initialize custom form elements
-// function initCustomForms() {
-// 	jcf.setOptions('Select', {
-// 		wrapNative: false,
-// 	});
-// 	jcf.replaceAll();
-// }
 
 // mobile menu init
 function initMobileNav() {
@@ -58,7 +51,7 @@ function initMobileNav() {
 				jQuery('body').mobileNav({
 					menuActiveClass: 'nav-active',
 					menuOpener: '.nav-opener',
-					menuDrop: '.navbar-nav',
+					menuDrop: '.nav',
 					hideOnClickOutside: true
 				});
 			},
