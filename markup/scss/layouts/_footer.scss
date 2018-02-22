@@ -1,36 +1,36 @@
-#footer {
-	padding: 40px 0 0; 
-}
-
 .footer-wrap {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 -10px;
 }
+.top-row {
+	padding: 40px 0 20px;
+}
 
 .footer-nav {
-	width: 41%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -10px;
 	padding: 0 10px 20px;
 
-	@include media("<desktop") {
-		width: 100%
+	@include media(">=desktop") {
+		width: 41%;
 	}
 
 	.foote-item {
-		width: 33%;
-		padding: 0 10px;
+		width: 100%;
+		text-align: center;
+		padding: 0 10px 10px;
 
-		@include media("<desktop") {
-			text-align: center;
-			padding: 0 10px 10px;
+		@include media(">=desktop") {
+			text-align: left;
+			padding: 0 10px;
 		}
 
-		@include media("<=400px") {
-			width: 100%;
+		@include media(">=400px") {
+			width: 33%;
 		}
 
 		ul {
@@ -63,14 +63,16 @@
 }
 
 .tweets {
-	width: 26%;
+	width: 100%;
+	max-width: 320px;
 	padding: 0 10px 20px 30px;
 	line-height: 22px;
+	margin: 0 auto;
 
-	@include media("<desktop") {
-		width: 100%;
-		max-width: 320px;
-		margin: 0 auto
+	@include media(">=desktop") {
+		width: 26%;
+		max-width: 100%;
+		margin: 0;
 	}
 
 	.twitter-title {
@@ -97,13 +99,15 @@
 }
 
 .contact-col {
-	width: 33%;
+	width: 100%;
+	max-width: 320px;
 	padding: 0 10px 20px;
+	margin: 0 auto;
 
-	@include media("<desktop") {
-		width: 100%;
-		max-width: 320px;
-		margin: 0 auto;
+	@include media(">=desktop") {
+		width: 33%;
+		max-width: 100%;
+		margin: 0;
 	}
 }
 
@@ -121,7 +125,6 @@
 		content:'';
 		position: absolute;
 		z-index: 100;
-		
 		width: 58px;
 		height: 58px;
 		top: 50%;
@@ -145,8 +148,6 @@
 		text-decoration: none;
 		display: block;
 		margin-bottom: 6px;
-
-
 	}
 
 	.email {
@@ -154,7 +155,6 @@
 		display: inline-block;
 		border-bottom: 1px dashed $light-blue;
 	}
-
 }
 
 .twitter-title,
@@ -162,7 +162,7 @@
 	display: inline-block;
 	font: 400 16px/22px $base-font-sans-serif;
 	margin-bottom: 10px;
-	
+
 	@include media("<tablet") {
 		margin-bottom: 0;
 	}
@@ -183,26 +183,25 @@
 	justify-content: space-between;
 }
 
-.bottom-row-box {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-
 .bottom-row {
 	border-top: 1px solid $light-gray;
 	box-shadow: inset 0  2px 5px 0px rgba(0, 0, 0, .15);
 	background: #f9f9f9;
 	padding: 18px 0 8px;
-	margin-top: 20px;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
 
 	.logo {
 		opacity: 0.8;
 		margin-bottom: 10px;
 	}
 
-	.adres {
+	address {
 		color: $light-gray;
 		font-size: 13px;
 		line-height: 15px;

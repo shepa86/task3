@@ -2,18 +2,11 @@
 	background: $white;
 	font: 13px/1.2em $base-font-sans-serif;
 
-	@include media("<tablet") {
-		padding: 0px 0 30px;
-	}
-
 	.logo {
-
 		vertical-align: top;
 		width: 159px;
 		float: left;
 	}
-
-	
 }
 
 .logo {
@@ -34,10 +27,9 @@
 
 	.nav {
 		@extend %clearfix;
-
 		background: $white;
 
-		@include media("<=tablet") {
+		@include media("<tablet") {
 			position: absolute;
 			top: 74px;
 			left: 0;
@@ -47,20 +39,16 @@
 		}
 
 		.button-holder {
-			float: right;
-			margin: 12px 0 0;
+			margin: 20px 0;
 
-			@include media("<=tablet") {
-				float: none;
-				display: inline-block;
-				vertical-align: top;
-				margin: 20px 0;
+			@include media(">=tablet") {
+				float: right;
+				margin: 12px 0 0;
 			}
 
 			.btn {
 				margin: 0 2px;
 			}
-
 		}
 	}
 }
@@ -71,47 +59,40 @@
 
 	font-size: 0;
 	line-height: 0;
-	margin: -3px 0 0 59px;
-	display: inline-block;
 	vertical-align: top;
 
-	@include media("<desktop") {
-		margin: 2px 0 0 20px;
+	@include media(">=tablet") {
+		margin: -3px 0 0 20px;
+		display: inline-block;
 	}
-
-	@include media("<=tablet") {
-		margin: 0;
-		width: 100%;
+	@include media(">=desktop") {
+		margin: -3px 0 0 59px;
 	}
 
 	>li {
-		display: inline-block;
-		vertical-align: middle;
+		display: block;
 
-		@include media("<=tablet") {
-			display: block;
+		@include media(">=tablet") {
+			display: inline-block;
+			vertical-align: middle;
 		}
 
 		&.active {
-			@include animate(color background);
-			background: $orange;
-			border-radius: 4px;
 
 			>a {
+				background: $orange;
 				color: $white;
-				padding: 6px 10px;
 				margin: 0;
-			}
+				width: 100%;
+				padding: 6px 10px;
 
-			@include media("<=tablet") {
-				border-radius: 0;
+				@include media(">=tablet") {
+					border-radius: 4px;
+				}
 			}
-
-			
 		}
 
 		>a {
-			margin: 0 10px;
 			text-transform: capitalize;
 		}
 	}
@@ -122,7 +103,6 @@
 		}
 	}
 
-
 	li {
 		font: 13px/15px $base-font-sans-serif;
 
@@ -131,12 +111,12 @@
 
 			color: $gray;
 			text-decoration: none;
-			display: block;
-			
-			@include media("<=tablet") {
-				display: inline-block;
-				vertical-align: top;
-				margin: 10px 15px;
+			display: inline-block;
+			vertical-align: top;
+			margin: 10px 15px;
+
+			@include media(">=tablet") {
+				display: block;
 			}
 		}
 	}
@@ -151,7 +131,7 @@
 	font-size: 13px;
 	line-height: 15px;
 
-	@include media("<=tablet") {
+	@include media("<tablet") {
 		margin-right: 60px;
 	}
 
@@ -159,11 +139,11 @@
 	.country {
 		display: inline-block;
 		vertical-align: top;
-		
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
 		margin: -2px 0 0 10px;
 		position: relative;
+		font-size: 0;
 
 		&:after {
 			content: '';
@@ -175,8 +155,8 @@
 			border-top: 5px solid $light-gray;
 		}
 
-		@include media("<=tablet") {
-			font-size: 0;
+		@include media(">=tablet") {
+			font-size: 13px;
 		}
 
 		>a {
@@ -185,7 +165,6 @@
 			padding: 6px 32px;
 		}
 	}
-
 
 	.lang {
 		background: $white;
@@ -207,12 +186,11 @@
 			}
 		}
 
-
 		.lang-icon {
 			position: absolute;
 			z-index: 999;
 			top: 8px;
-			left: 10px;
+			left: 22px;
 
 			&:before {
 				content: '';
@@ -221,8 +199,8 @@
 				height: 11px;
 			}
 
-			@include media("<=tablet") {
-				left: 22px;
+			@include media(">=tablet") {
+				left: 10px;
 			}
 
 			&.lang-fr {
@@ -302,6 +280,7 @@
 		ul {
 			@extend %listreset;
 			@include animate(opacity visibility);
+
 			position: absolute;
 			z-index: 999;
 			top: 25px;
@@ -314,7 +293,7 @@
 			border-bottom-left-radius: 5px;
 			overflow: hidden;
 
-			@include media("<=tablet") {
+			@include media("<tablet") {
 				font-size: 11px;
 				line-height: 13px;
 				min-width: 100px;
@@ -338,10 +317,10 @@
 				text-decoration: none;
 				display: block;
 				width: 100%;
-				padding: 6px 5px 6px 32px;
+				padding: 6px 3px;
 
-				@include media("<=tablet") {
-					padding: 6px 3px;
+				@include media(">=tablet") {
+					padding: 6px 5px 6px 32px;
 				}
 			}
 		}
@@ -351,10 +330,10 @@
 		line-height: 17px;
 		position: absolute;
 		top: 5px;
-		left: 9px;
+		left: 22px;
 
-		@include media("<=tablet") {
-			left: 22px;
+		@include media(">=tablet") {
+			left: 9px;
 		}
 	}
 }
@@ -362,7 +341,6 @@
 .nav-opener {
 	width: 32px;
 	height: 24px;
-	
 	position: absolute;
 	z-index: 900;
 	right: 20px;
@@ -394,7 +372,7 @@
 		top: 21px;
 	}
 
-	@include media(">tablet"){
+	@include media(">=tablet"){
 		display: none;
 	}
 }
