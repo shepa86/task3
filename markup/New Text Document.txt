@@ -1,0 +1,30 @@
++++ https://s3.amazonaws.com/scrstorage/g13680o6o63n648g6.jpg кодировать спец.символы
++++ https://s3.amazonaws.com/scrstorage/v136897vj36o6ir3665.jpg это не список, это два отдельныъ элемента
++++ https://s3.amazonaws.com/scrstorage/13j69760nd6i9o7361.jpg сделай один контейнер
++++ https://s3.amazonaws.com/scrstorage/m1qqx37057252dt26c59.jpg не используй эти свойства вместе (+ position: absolute)
++++ https://s3.amazonaws.com/scrstorage/13p709e0012mti1755.jpg просто display: block будет оптимальней
++++ https://s3.amazonaws.com/scrstorage/1p3e71680282e0c31.jpg лишние стили
++++ https://s3.amazonaws.com/scrstorage/13725nch810382o4f9.jpg неправильная кликабельная область
++++ https://s3.amazonaws.com/scrstorage/q13s730g5621d3765.jpg https://s3.amazonaws.com/scrstorage/ekwl138158ol151207.jpg лишние стили тут
+ - https://s3.amazonaws.com/scrstorage/a13735278wm0f342.jpg линий маржин
++++ https://s3.amazonaws.com/scrstorage/1h3u7r47658j3q5062.jpg не могу нажать на кнопки
++++ https://s3.amazonaws.com/scrstorage/c137x5ub5787bh551d2.jpg слишком большой отступ
++++ https://s3.amazonaws.com/scrstorage/137780239d7ci4.jpg попрпавь медиазапросы
+
++++ https://s3.amazonaws.com/scrstorage/gl13i78541i2yv146q74.jpg перенеси в nav-holder
++++ https://s3.amazonaws.com/scrstorage/138106j8k11198b1.jpg capitalize
++++ ховер на табы + height:100% На ссылке лишняя
++++ https://s3.amazonaws.com/scrstorage/x1384b1581k88pr01v9.jpg тег p Добавить. https://s3.amazonaws.com/scrstorage/rml1o3w84396246206.jpg должен быть паддинг, это же внутренний отступ
++++ форма должна быть застилена глобально. от класса на форме
++++ https://s3.amazonaws.com/scrstorage/n13t8636200978f5.jpg забыл высоту на инпут
++++ https://s3.amazonaws.com/scrstorage/r13q8772s873j2312.jpg иконка должна быть рядом с инпутом и быть на абсолюте + добавь ей pointer-events: none;
+-?- https://s3.amazonaws.com/scrstorage/138963c3u358v16jl5.jpg
++++ https://s3.amazonaws.com/scrstorage/g1ho3920g891l15090.jpg лишний верхний отступ
++++ https://s3.amazonaws.com/scrstorage/13926q310623t03.jpg это основой шрифт, он должен быть на body
++++ https://s3.amazonaws.com/scrstorage/rh13933b2p1051w049.jpg сделай инлайн блочной
++++ https://s3.amazonaws.com/scrstorage/139tn4p83p4v11x914a4.jpg сначало должно быть логический элемент, а а внем container ---добавил обертку
++++ https://s3.amazonaws.com/scrstorage/139633wg577u3212.jpg ссылки кодируем
++++ https://s3.amazonaws.com/scrstorage/1g396xn81j641941.jpg лишний
++++ https://s3.amazonaws.com/scrstorage/e139725c43a1h97h69.jpg лишний
++++ https://s3.amazonaws.com/scrstorage/fb1397613c2mb67688.jpg <address>
+
